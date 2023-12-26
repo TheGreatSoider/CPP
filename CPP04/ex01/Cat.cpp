@@ -33,7 +33,7 @@ void    Cat::makeSound( void ) const
     std::cout << "Meow!" << std::endl;
 }
 
-Cat::Cat( const Cat& src )
+Cat::Cat( const Cat& src ) : Animal("Cat")
 {
     *this = src;
 }

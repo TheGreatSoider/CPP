@@ -24,6 +24,7 @@ int main( void )
     const Animal* i = new Cat();
 
     std::cout << "J Type: " << j->getType() << " " << std::endl;
+    j->makeSound();
     std::cout << "I Type: " << i->getType() << " " << std::endl;
     i->makeSound();
     meta->makeSound();

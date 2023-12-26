@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= materia
+NAME		= zooBrain
 	
 CC			= c++
 FLAGS		= -Wall -Wextra -Werror
@@ -23,7 +23,7 @@ FILES		= main AAnimal Cat Dog WrongAnimal WrongCat Brain
 
 SRC			= $(FILES:=.cpp)
 OBJ			= $(addprefix $(OBJDIR)/, $(FILES:=.o))
-HEADER		= Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp
+HEADER		= Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 .PHONY: all clean fclean re bonus norm
 

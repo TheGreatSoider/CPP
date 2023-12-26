@@ -34,7 +34,7 @@ void    Dog::makeSound( void ) const
     std::cout << "Woof!" << std::endl;
 }
 
-Dog::Dog( const Dog& src )
+Dog::Dog( const Dog& src ) : Animal ("Dog")
 {
     *this = src;
 }

@@ -18,7 +18,7 @@ Cat::Cat( void ) : AAnimal("Cat") {
         this->_brain = new Brain();
     }
     catch (const std::bad_alloc& e) {
-        std::cout << "Memory Allocation is failed : " << e.what() << std::endl;
+        std::cout << "Memory Allocation has failed : " << e.what() << std::endl;
     }
 }
 
@@ -33,7 +33,7 @@ void    Cat::makeSound( void ) const
     std::cout << "Meow!" << std::endl;
 }
 
-Cat::Cat( const Cat& src )
+Cat::Cat( const Cat& src ) : AAnimal ("Cat")
 {
     *this = src;
 }
