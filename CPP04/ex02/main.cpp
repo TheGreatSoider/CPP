@@ -19,16 +19,24 @@ int main( void )
 {
     // const AAnimal* j = new Dog();
     // const AAnimal* i = new Cat();
-    const AAnimal* j[4] = { new Dog(), new Dog(), new Dog(), new Dog() };
-    const AAnimal* i[4] = { new Cat(), new Cat(), new Cat(), new Cat() };
+    // const AAnimal* meta = new AAnimal();
+    const AAnimal* j[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+    const AAnimal* i[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
+    // meta->makeSound();
 
-
+    Cat basic1;
+    {
+        Cat tmp1 = basic1;
+        tmp1.printBrain();
+        basic1.printBrain();
+    }
     // std::cout << "--------------- Animal ---------------" << std::endl;
 
     // const AAnimal* meta = new AAnimal();
     for ( int a = 0; a < 4; a++ ) {
         std::cout << (a + 1) << std::endl;
         std::cout << "J Type: " << j[a]->getType() << " " << std::endl;
+        
         j[a]->makeSound();
         delete j[a];
     }
@@ -39,7 +47,6 @@ int main( void )
         i[a]->makeSound();
         delete i[a];
     }
-    // meta->makeSound();
 
     // delete j;
     // delete i;

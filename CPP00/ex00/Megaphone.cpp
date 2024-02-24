@@ -17,10 +17,13 @@ int	main(int ac, char **av){
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else{
 		for (int i = 1; av[i]; i++){
-				for (int j = 0; av[i][j]; j++)
-					std::cout << (char) toupper(av[i][j]);
-				if (i < ac - 1)
-					std::cout << ' ';
+			for (int j = 0; av[i][j]; j++){
+				std::cout << (char) toupper(av[i][j]);
+				if (av[i][j] == ' ' && av[i][j + 1] == '\0')
+					break;
+				}
+			if (i < ac - 1 && *av[i] == '\0')
+				std::cout << ' ';
 		}
 	}
 	std::cout << std::endl;

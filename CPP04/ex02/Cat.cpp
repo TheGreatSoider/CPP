@@ -48,3 +48,8 @@ Cat& Cat::operator=( const Cat& src )
     }
     return *this;
 }
+
+void   Cat::printBrain( void ) const{
+    std::cout << this->_brain << std::endl;
+}
+

@@ -23,12 +23,12 @@ protected:
 public:
     WrongAnimal( void );
     WrongAnimal( std::string type );
-    ~WrongAnimal( void );
+    virtual ~WrongAnimal( void );
 
     WrongAnimal( const WrongAnimal& src );
     WrongAnimal& operator=( const WrongAnimal& rhs );
 
-    void            makeSound( void ) const;
+    virtual void            makeSound( void ) const;
     std::string     getType( void ) const; 
 };
 

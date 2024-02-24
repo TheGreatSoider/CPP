@@ -51,10 +51,15 @@ int main( void )
         Dog tmp = basic;
     }
 
-    const Animal* animals[4] = { new Dog(), new Dog(), new Cat(), new Cat() };
-    for ( int i = 0; i < 4; i++ ) {
+    Cat basic1;
+    {
+        Cat tmp1 = basic1;
+    }
+
+    const WrongAnimal* animals[2] = { new WrongCat(), new WrongCat() };
+    for ( int i = 0; i < 2; i++ ) {
         delete animals[i];
-        // std::cout << (i + 1) << std::endl;
+        std::cout << (i + 1) << std::endl;
     }
 
     return 0;

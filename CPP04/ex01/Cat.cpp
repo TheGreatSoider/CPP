@@ -45,6 +45,8 @@ Cat& Cat::operator=( const Cat& src )
     {
         this->_type = src._type;
         this->_brain = new Brain( *src._brain );
+        std::cout << "Address of the new brain: " << this->_brain << std::endl;
     }
     return *this;
 }
+

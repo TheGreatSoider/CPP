@@ -26,6 +26,8 @@ public:
 
     Cat( const Cat& src );
     Cat& operator=( const Cat& src );
+    
+    void printBrain( void ) const;
 
     void   makeSound( void ) const;
 };
